@@ -1,0 +1,97 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --step--2: clamp(0.89rem, calc(0.83rem + 0.29vw), 1.09rem);
+    --step--1: clamp(1.00rem, calc(0.91rem + 0.45vw), 1.30rem);
+    --step-0: clamp(1.13rem, calc(1.00rem + 0.65vw), 1.56rem);
+    --step-1: clamp(1.27rem, calc(1.09rem + 0.90vw), 1.88rem);
+    --step-2: clamp(1.42rem, calc(1.18rem + 1.22vw), 2.25rem);
+    --step-3: clamp(1.60rem, calc(1.28rem + 1.63vw), 2.70rem);
+    --step-4: clamp(1.80rem, calc(1.38rem + 2.13vw), 3.24rem);
+    --step-5: clamp(2.03rem, calc(1.48rem + 2.76vw), 3.89rem);
+}
+
+.home{
+    background-image: linear-gradient(to right bottom, #f8f7ff, #edebff, #e1dfff, #d5d3ff, #c9c7ff);
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    padding: 20px 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: var(--step-1);
+    font-family: 'Abel' sans-serif;
+}
+
+nav ul{
+    display: flex;
+    gap: 2em;
+    font-size: var(--step--0);
+}
+
+.hero{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 60px 180px 10px 250px;
+    gap: 10em;
+}
+
+.introguess{
+    display: flex;
+    line-height: 45px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.introcontent{
+    display: block;
+    margin-bottom: 30px;
+}
+
+.introguess h1{
+    font-size: var(--step-3);
+    margin-bottom: 30px;
+}
+.introguess p{
+    font-size: var(--step-1);
+}
+
+.introguess button{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.heroguess{
+    justify-content: center;
+    display: flex;
+}
+
+.number{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+#guess{
+    font-size: var(--step-2);
+}
+
+.number button{
+    padding: 20px 23px;
+    border-radius: 50%;
+    border: grey 0.5px solid;
+}
