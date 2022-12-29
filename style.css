@@ -127,7 +127,7 @@ nav ul{
         margin-top: 15px;
     }
     .heroill{
-        height: 100vh;
+        height: 90vh;
     }
     .heroill .imgill{
         display: flex;
@@ -142,5 +142,8 @@ nav ul{
         align-items: center;
         color: rgb(67, 67, 67);
         margin-top: 15px;
+    }
+    .introguess{
+        height: 100vh;
     }
 }
