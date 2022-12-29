@@ -51,6 +51,14 @@ nav ul li a{
     gap: 10em;
 }
 
+.greeting{
+    display: none;
+}
+
+.arrow{
+    display: none;
+}
+
 .introguess{
     display: flex;
     line-height: 45px;
@@ -122,7 +130,8 @@ nav ul li a{
     }
     .greeting{
         text-align: center;
-        margin-top: 10vh;
+        display: block;
+        margin-top: 8vh;
     }
     .greeting h3{
         width: min(100% - 3rem, var(--container-max, 60ch));
