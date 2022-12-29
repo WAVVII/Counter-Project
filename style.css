@@ -103,39 +103,150 @@ nav ul li a{
     cursor: pointer;
 }
 
+.heroselect{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.selectcontent{
+    position: relative;
+    width: min(100% - 2rem, var(--container-max, 60ch));
+    margin-inline: auto;
+}
+
+.selectcontent h1{
+    text-align: center;
+    font-size: var(--step-2);
+}
+
+.range{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5em;
+    margin-top: 60px;
+}
+
+.startbtns{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.startbtns button{ 
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: var(--step-0);
+    font-weight: bold;
+    color: inherit;
+    box-shadow: 0px 0px 10px rgb(142, 140, 140, .607);
+    background-color: var(--gradient);
+}
+
+.startconfirm button{
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: var(--step--2);
+    font-weight: 500;
+    background-color: var(--gradient);
+    box-shadow: 0px 0px 10px rgb(142, 140, 140, .607);
+    margin-top: 25px;
+}
+
+.changenext{
+    display: flex;
+    justify-content: center
+}
+
+.changenext button{
+    margin-top: 50px;
+    padding: .5rem clamp(1rem, 6%, 3rem);
+    border: 0.5px rgb(128, 128, 128, .408) solid;
+    background-color: var(--gradient);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(142, 140, 140, .607);
+    font-weight: 600;
+}
+
 .introcontent i{
     margin-top: 35px;
 }
 
 .heroguess{
     justify-content: center;
-    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.herotext{
+    margin-bottom: 3em;
+}
+
+.herotext h1{
+    margin-bottom: .6em;
+}
+
+.heroguess h1{
+    font-size: var(--step-2);
+    text-align: left;
+}
+
+.heroguess p{
+    width: min(100% - 6rem, var(--container-max, 60ch));
+    margin-inline: left;
+    font-weight: 500;
+    font-size: var(--step--1);
 }
 
 .number{
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 3em;
+    place-content: center;
 }
 
 #guess{
-    font-size: var(--step-2);
+    font-size: var(--step-3);
 }
 
 .number button{
-    padding: 20px 23px;
     border-radius: 50%;
-    border: grey 0.5px solid;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: inherit;
+    box-shadow: 0px 0px 10px rgb(142, 140, 140);
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 920.5px) {
     .hero{
         justify-content: space-between;
-        padding: 60px 180px 10px 250px;
+        padding: 60px 170px 10px 250px;
+    }
+    .number button{         
+        padding: 1rem clamp(1.5rem, 5%, 3rem);
+    }
+    .startbtns button{
+        padding: .2rem clamp(.7rem, 5%, 3rem);
+    }
+    .startconfirm button{
+        padding: .2rem clamp(.7rem, 5%, 3rem);
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
     .home{
         height: 202vh;
     }
@@ -164,15 +275,10 @@ nav ul li a{
         justify-content: center;
         margin-top: 50px;
     }
-    .arrow{
-        height: 10vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(67, 67, 67);
-        margin-top: 15px;
-    }
     .introguess{
         height: 100vh;
+    }
+    .number .button{
+        padding: 1rem clamp(1.7rem, 10%, 3rem);
     }
 }
