@@ -5,6 +5,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 :root {
@@ -32,7 +33,6 @@ nav{
 
 .logo{
     font-size: var(--step-1);
-    font-family: 'Abel' sans-serif;
 }
 
 nav ul{
@@ -44,8 +44,6 @@ nav ul{
 .hero{
     display: flex;
     position: relative;
-    justify-content: space-between;
-    padding: 60px 180px 10px 250px;
     gap: 10em;
 }
 
@@ -64,10 +62,19 @@ nav ul{
 
 .introguess h1{
     font-size: var(--step-3);
-    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 55px;
 }
+
+.introguess h1:nth-child(2){
+    margin-bottom: 40px;
+}
+
 .introguess p{
     font-size: var(--step-1);
+    font-weight: 500;
+    text-align: left;
 }
 
 .introguess button{
@@ -94,4 +101,46 @@ nav ul{
     padding: 20px 23px;
     border-radius: 50%;
     border: grey 0.5px solid;
+}
+
+@media screen and (min-width: 920px) {
+    .hero{
+        justify-content: space-between;
+        padding: 60px 180px 10px 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .greeting{
+        text-align: center;
+        margin-top: 10vh;
+    }
+    .greeting h3{
+        width: min(100% - 3rem, var(--container-max, 60ch));
+        margin-inline: auto; 
+        text-align: center; 
+        margin-top: 15px;
+    }
+    .heroill{
+        height: 100vh;
+    }
+    .heroill .imgill{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+    }
+    .arrow{
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(67, 67, 67);
+        margin-top: 15px;
+    }
 }
