@@ -17,11 +17,12 @@
     --step-3: clamp(1.60rem, calc(1.28rem + 1.63vw), 2.70rem);
     --step-4: clamp(1.80rem, calc(1.38rem + 2.13vw), 3.24rem);
     --step-5: clamp(2.03rem, calc(1.48rem + 2.76vw), 3.89rem);
+    --gradient: linear-gradient(to right bottom, #f8f7ff, #edebff, #e1dfff, #d5d3ff, #c9c7ff);
 }
 
 .home{
     background-image: linear-gradient(to right bottom, #f8f7ff, #edebff, #e1dfff, #d5d3ff, #c9c7ff);
-    height: 202vh;
+    height: 100vh;
 }
 
 nav{
@@ -89,9 +90,21 @@ nav ul li a{
     text-align: left;
 }
 
+.buttonside{
+    gap: 2em;
+}
+
 .introguess button{
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 25px;
+    padding: .5rem clamp(1rem, 10%, 3rem);
+    border: 0.5px rgb(128, 128, 128, .408) solid;
+    background-color: var(--gradient);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.introcontent i{
+    margin-top: 35px;
 }
 
 .heroguess{
@@ -123,6 +136,9 @@ nav ul li a{
 }
 
 @media screen and (max-width: 768px) {
+    .home{
+        height: 202vh;
+    }
     .hero{
         display: flex;
         flex-direction: column;
