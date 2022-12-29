@@ -131,7 +131,6 @@ nav ul li a{
     .greeting{
         text-align: center;
         display: block;
-        margin-top: 8vh;
     }
     .greeting h3{
         width: min(100% - 3rem, var(--container-max, 60ch));
@@ -140,13 +139,14 @@ nav ul li a{
         margin-top: 15px;
     }
     .heroill{
-        height: 90vh;
+        height: 100vh;
+        padding: 3.5rem clamp(1rem, 5%, 3rem);
     }
     .heroill .imgill{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 70px;
+        margin-top: 50px;
     }
     .arrow{
         height: 10vh;
