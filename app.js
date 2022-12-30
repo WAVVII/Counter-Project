@@ -75,14 +75,14 @@ let guess = document.getElementById("guess")
 let counter = 1
 
 function incr() {
-  if (counter < 10) {
+  if (counter < store.range.end) {
     counter++;
   }
   updateCounter();
 }
 
 function decr() {
-  if (counter > 1) {
+  if (counter > store.range.start) {
     counter--;
   }
   updateCounter();
