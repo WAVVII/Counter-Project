@@ -36,6 +36,10 @@ nav{
     font-size: var(--step-1);
 }
 
+.logo a{
+    color: black;
+}
+
 nav ul{
     display: flex;
     gap: 2em;
@@ -130,9 +134,15 @@ nav ul li a{
     margin-top: 60px;
 }
 
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}  
+
 .startbtns{
     margin-top: 25px;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     gap: 2em;
@@ -162,6 +172,23 @@ nav ul li a{
     margin-top: 25px;
 }
 
+.confirmbutton + .fa-solid.fa-check {
+    animation: confirm-animation 0.5s ease-in-out;
+    margin-top: 25px;
+}
+  
+@keyframes confirm-animation {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+  
+
 .changenext{
     display: flex;
     justify-content: center
@@ -174,7 +201,6 @@ nav ul li a{
     background-color: var(--gradient);
     border-radius: 15px;
     cursor: pointer;
-    box-shadow: 0px 0px 10px rgb(142, 140, 140, .607);
     font-weight: 600;
 }
 
@@ -186,6 +212,10 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     display: none;
+}
+
+.herocenter{
+    width: 449px;
 }
 
 .herotext{
@@ -213,6 +243,7 @@ nav ul li a{
     align-items: center;
     gap: 3em;
     place-content: center;
+    flex-direction: row-reverse;
 }
 
 #guess{
@@ -236,7 +267,7 @@ nav ul li a{
         padding: 60px 170px 10px 250px;
     }
     .number button{         
-        padding: 1rem clamp(1.5rem, 5%, 3rem);
+        padding: .8rem clamp(1.5rem, 4%, 3rem);
     }
     .startbtns button{
         padding: .2rem clamp(.7rem, 5%, 3rem);
